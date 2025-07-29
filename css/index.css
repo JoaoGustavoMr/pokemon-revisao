@@ -160,7 +160,7 @@ main p {
 }
 .card-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 20px;
     background-color: #f8f9fa;
     border-top: 1px solid #ddd;
