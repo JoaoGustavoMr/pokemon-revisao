@@ -46,7 +46,6 @@ nav ul li a:hover {
 }
 
 main{
-    padding: 20px;
     background-color: #a1bff8;
     min-height: calc(100vh - 140px);
     display: flex;
@@ -58,8 +57,14 @@ main{
 main h1 {
     color: #333;
     font-size: 36px;
-    margin-top: -100px;
+    margin-top: -20px;
 }
+input[type="text"], input[type="date"], input[type="number"], select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}	
 
 #form-box {
     margin-top: 20px;
@@ -68,6 +73,7 @@ main h1 {
     border: 2px solid #007bff; 
     padding: 20px;
     border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 10, 144, 0.1);
 }
 
 #form-box form {
@@ -111,13 +117,14 @@ main h1 {
 }
 
 #form-box form button {
-    background-color: #00C7FB;
-    font-size: 17px;
-    width: 30%;
-    border-radius: 7px;
-    margin-top: 7px;
-    transition: 0.2s ease-in-out;
-
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
 }
 
 #form-box form button:hover {
