@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+nav {
+    padding: 20px;
+    background-color: rgb(69, 69, 222);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease-in-out; 
+}
+
+nav img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-left: 20px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-right: 200px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 80px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+main{
+    padding: 20px;
+    background-color: #a1bff8;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1 {
+    color: #333;
+    font-size: 36px;
+    margin-top: -180px;
+}
+
+#form-box {
+    margin-top: 20px;
+    width: 40%;
+    background-color: white;
+    border: 2px solid #007bff; 
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#form-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-box form .parte {
+    display: flex;
+    justify-content: center;
+}
+
+#form-box form .parte .campo {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#form-box form #nome {
+    margin-left: 5px;
+    width: 300px;
+}
+
+#form-box form #tipo, #form-box form #hp, #form-box form #foto {
+    margin-left: 5px;
+}
+
+#form-box form #data_registro {
+    margin-left: 5px;
+    width: 240px;
+}
+
+#form-box form #ataque {
+    margin-left: 5px;
+    width: 180px;
+}
+
+#form-box form #defesa {
+    margin-left: 5px;
+    width: 180px;
+}
+
+#form-box form button {
+    background-color: #00FF00;
+    font-size: 17px;
+    width: 30%;
+    border-radius: 7px;
+    margin-top: 5px;
+}
+
+#form-box form button:hover {
+    cursor: pointer;
+}
+
+#form-box form #parte-botao {
+    display: flex;
+    justify-content: center;
+}
+
+#form-box form #parte2, #form-box form #parte3 {
+    margin-top: 20px;
+}
+
+#form-box form #localizacao, #form-box form #observacao {
+    width: 510px;
+}
+
+#form-box form .campo-solo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+#form-box form #parte-imagem {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
