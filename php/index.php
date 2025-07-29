@@ -2,7 +2,7 @@
 
 include('../php/conexao.php');
 
-$sql = "SELECT pokemon_nome, pokemon_tipo, pokemon_localizacao, pokemon_dataRegistro, pokemon_hp, pokemon_ataque, pokemon_defesa, pokemon_obs, pokemon_foto FROM pokemon";
+$sql = "SELECT pokemon_id, pokemon_nome, pokemon_tipo, pokemon_localizacao, pokemon_dataRegistro, pokemon_hp, pokemon_ataque, pokemon_defesa, pokemon_obs, pokemon_foto FROM pokemon";
 $result = $conexao->query($sql);
 
 ?>
@@ -41,7 +41,6 @@ $result = $conexao->query($sql);
     <?php 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            // converte o BLOB para base64
             $fotoBase64 = base64_encode($row['pokemon_foto']);
             ?>
             <div class="card">
@@ -59,7 +58,7 @@ $result = $conexao->query($sql);
                     <p class="observacao"><?= nl2br(htmlspecialchars($row['pokemon_obs'])) ?></p>
                 </div>
                 <div class="card-footer">
-                    <button class="btn-editar" onclick="editarPokemon(<?= $row['pokemon_id'] ?>)">Editar</button>
+                    <!-- <button class="btn-editar"  onclick='editarPokemon(<?= json_encode($row, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP) ?>)'>Editar</button> -->
                     <button class="btn-excluir" onclick="excluirPokemon(<?= $row['pokemon_id'] ?>)">Excluir</button>
                 </div>
             </div>
@@ -72,7 +71,5 @@ $result = $conexao->query($sql);
             ?>
         </section>
     </main>
-    <footer>
-    </footer>
 </body>
 </html>
